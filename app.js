@@ -47,6 +47,11 @@ app.post("/hackathon-add", async (req,res)=>{
     res.json({"status":"success"})
 })
 
+app.post("/view-hackathon", async (req,res)=>{
+    const logs=await Hackathon.find()
+    res.json(logs)
+})
+
 
 
 app.listen(2000, ()=>{
